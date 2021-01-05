@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/gorilla/mux"
 	"log"
 	"net/http"
-	"github.com/gorilla/mux"
-
-	)
+)
 
 func helloWorld(w http.ResponseWriter, req *http.Request){
 	w.WriteHeader(http.StatusOK)
@@ -16,10 +15,12 @@ func helloWorld(w http.ResponseWriter, req *http.Request){
 func handleRequest(){
 	myRouter := mux.NewRouter()
 	myRouter.HandleFunc("/", helloWorld)
-	log.Fatal(http.ListenAndServe(":8001",myRouter))
+	port := ":8001"
+	log.Printf("Server running on port %s", port)
+	log.Fatal(http.ListenAndServe(port, myRouter))
 }
 
 func main(){
 	fmt.Println("authentification Microservice")
-
+	handleRequest()
 }
