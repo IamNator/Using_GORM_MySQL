@@ -1,2 +1,3 @@
-# Using_GORM_MySQL
-Experimenting with the GORM package 
+# authentification-Microservice
+
+This microservice handles authentification of user. It APIs handle registration, updating user information, login and logout
