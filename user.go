@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
+	"github.com/jinzhu/gorm"
 	"net/http"
-	//"github.com/jinzhu/gorm"
 	//_"github.com/jinzhu/gorm/dialects/sqlite"
 )
 
-//var db *gorm.DB
+var db *gorm.DB
 
 
 func AllUsers(w http.ResponseWriter, req *http.Request){
