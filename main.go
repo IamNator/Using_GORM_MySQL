@@ -27,5 +27,6 @@ func handleRequest(){
 
 func main(){
 	fmt.Println("authentification Microservice")
+	InitialMigration()
 	handleRequest()
 }
